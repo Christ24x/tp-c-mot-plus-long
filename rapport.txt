@@ -1,0 +1,102 @@
+
+RAPPORT DU PROJET
+LE MOT LE PLUS LONG
+
+
+Etablissement :
+ESGIS Cotonou
+
+Filière :
+L2 IRT
+
+Année académique :
+2025 - 2026
+
+MEMBRES DU GROUPE
+
+- SOSSOU Alois
+- AKIYEMI Stephen
+- BANDA-BONI Vianney
+- TOGBE Hamed
+- GANMANDOUALO Destiny
+
+DESCRIPTION DU PROJET
+
+Le projet consiste à réaliser en langage C
+un jeu inspiré du célèbre jeu :
+« LE MOT LE PLUS LONG ».
+
+Le principe est de générer une grille
+de 9 lettres à partir des choix des joueurs.
+
+Chaque joueur propose ensuite un mot.
+
+Le programme :
+- vérifie si le mot peut être formé
+  avec les lettres de la grille,
+- vérifie si le mot existe dans le
+  dictionnaire,
+- attribue automatiquement les points,
+- affiche les scores,
+- détermine le gagnant final.
+
+
+FONCTIONNALITES REALISEES
+
+
+- Gestion des joueurs
+- Génération des voyelles
+- Génération des consonnes
+- Affichage de la grille
+- Vérification des mots
+- Vérification du dictionnaire
+- Calcul des scores
+- Sauvegarde de partie
+- Gestion de plusieurs tours
+- Détermination du gagnant
+
+
+REPARTITION DES TACHES
+
+
+Alois :
+- architecture du projet
+- intégration du code
+- boucle principale
+- gestion des tours
+- GitHub
+- tests finaux
+
+Stephen :
+- génération de la grille
+
+Vianney :
+- affichage terminal
+
+Hamed :
+- validation des mots
+
+Destiny :
+- sauvegarde et bonus
+
+DIFFICULTES RENCONTREES
+
+- Gestion des fichiers .h
+- Validation correcte des mots
+- Organisation du projet GitHub
+- Gestion des sauvegardes
+
+CONCLUSION
+
+Ce projet nous a permis de pratiquer :
+- la modularité en C,
+- les structures,
+- les fichiers,
+- les tableaux,
+- les fonctions,
+- GitHub,
+- le travail collaboratif.
+
+========================================
+FIN DU RAPPORT
+========================================
