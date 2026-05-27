@@ -2,28 +2,27 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-
 #include "grid.h"
 #include "display.h"
 #include "validation.h"
 #include "save.h"
 
 #define MAX_MOT 50
+
+/* Prototype manquant - à déplacer dans display.h si ce n'est pas déjà fait */
+void afficherScores(char joueur1[], char joueur2[], int score1, int score2);
+
 int main()
 {
     srand(time(NULL));
 
     char joueur1[20];
     char joueur2[20];
-
     int score1 = 0;
     int score2 = 0;
-
     int tours;
     int premierJoueur;
-
     char grille[9];
-
     char mot1[MAX_MOT];
     char mot2[MAX_MOT];
 
@@ -33,28 +32,25 @@ int main()
 
     printf("Nom du joueur 1 : ");
     scanf("%s", joueur1);
-
     printf("Nom du joueur 2 : ");
     scanf("%s", joueur2);
-
     printf("Nombre de tours : ");
     scanf("%d", &tours);
-
     printf("Qui commence ? (1 ou 2) : ");
     scanf("%d", &premierJoueur);
 
     printf("\nDebut de la partie...\n\n");
-for(int tour = 1; tour <= tours; tour++)
+
+    for(int tour = 1; tour <= tours; tour++)  /* CORRECTION: accolades ajoutées */
+    {
         printf("              TOUR %d\n", tour);
         printf("=====================================\n\n");
 
         remplirGrille(grille);
-
         afficherGrille(grille);
 
         printf("\n%s entre un mot : ", joueur1);
         scanf("%s", mot1);
-
         printf("%s entre un mot : ", joueur2);
         scanf("%s", mot2);
 
@@ -67,7 +63,6 @@ for(int tour = 1; tour <= tours; tour++)
         {
             scoreTour1 = calculerScore(mot1);
             score1 += scoreTour1;
-
             printf("Mot valide pour %s (+%d points)\n", joueur1, scoreTour1);
         }
         else
@@ -79,7 +74,6 @@ for(int tour = 1; tour <= tours; tour++)
         {
             scoreTour2 = calculerScore(mot2);
             score2 += scoreTour2;
-
             printf("Mot valide pour %s (+%d points)\n", joueur2, scoreTour2);
         }
         else
@@ -94,13 +88,11 @@ for(int tour = 1; tour <= tours; tour++)
         afficherScores(joueur1, joueur2, score1, score2);
 
         char choix;
-
         printf("\nVoulez-vous sauvegarder la partie ? (o/n) : ");
         scanf(" %c", &choix);
-
         if(choix == 'o' || choix == 'O')
         {
-            sauvegarderPartie(joueur1, joueur2, score1, score2, tour, tours);
+            sauvegarderPartie(joueur1, joueur2, score1, score2, tour); /* CORRECTION: tours supprimé */
         }
 
         printf("\n\n");
